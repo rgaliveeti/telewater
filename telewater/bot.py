@@ -99,7 +99,7 @@ async def watermarker(event):
 
     org_file = stamp(await event.download_media(""), user=str(event.sender_id))
     text=event.message.text
-    id1=evet.message.id
+    id1=event.message.id
 
     file = File(org_file)
     wtm = Watermark(File("image.png"), pos=conf.config.position)
