@@ -109,7 +109,7 @@ async def watermarker(event):
     )
     await event.client.send_file(event.sender_id, out_file,caption=text)
     try:
-        await event.client.edit_message(event.sender_id,id1,out_file)
+        await event.client.edit_file(event.sender_id,id1,out_file)
     except:
         pass
     cleanup(org_file, out_file)
