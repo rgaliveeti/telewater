@@ -100,7 +100,7 @@ async def watermarker(event):
     org_file = stamp(await event.download_media(""), user=str(event.sender_id))
     text=event.message.text
     id1=event.message.id
-    await client.delete_messages(chat, 1)
+    await client.delete_messages(event.sender_id, id1)
     file = File(org_file)
     wtm = Watermark(File("image.png"), pos=conf.config.position)
 
